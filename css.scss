@@ -2,81 +2,29 @@
 
 $tierAmount: 8;
 
-$bar-bevel: 25px;
-$bar-border-color: #000000;
-$bar-border-thickness: 5px;
-$bar-border-style: solid;
-$animate-duration: 1500ms;
-$animate-delay: 1s;
+:root{
+	--bar-bevel: 25px;
+	--bar-border-color: #000000;
+	--bar-border-thickness: 5px;
+	--bar-border-style: solid;
+	--animate-duration: 1500ms;
+	--animate-delay: 1s;
 
-$heart0-background: #000000;
-$heart0-primary: #353535;
-$heart0-secondary: #353535;
-$heart0-shine: #353535;
-$heart0-outline: #191919;
-$heart0-outline-special: #191919;
-
-$tier1-background: #9b4428;
-$heart1-primary: #ff1313;
-$heart1-secondary: #bb1313;
-$heart1-shine: #ffffff;
-$heart1-outline: #191919;
-$heart1-outline-special: #e47c56;
-
-$tier2-background: #737373;
-$heart2-primary: #e47c56;
-$heart2-secondary: #c15938;
-$heart2-shine: #ffc2b2;
-$heart2-outline: #191919;
-$heart2-outline-special: #d9d9d9;
-
-$tier3-background: #bc880a;
-$heart3-primary: #d9d9d9;
-$heart3-secondary: #a9a9a9;
-$heart3-shine: #fefefe;
-$heart3-outline: #191919;
-$heart3-outline-special: #f5b20f;
-
-$tier4-background: #ffffff;
-$heart4-primary: #8bf4e3;
-$heart4-secondary: #2dcdb3;
-$heart4-shine: #fbc443;
-$heart4-outline: #191919;
-$heart4-outline-special: #5b85df;
-
-$tier5-background: #012d01;
-$heart5-primary: #5b85df;
-$heart5-secondary: #3061c2;
-$heart5-shine: #7299ed;
-$heart5-outline: #191919;
-$heart5-outline-special: #00ab2e;
-
-$tier6-background: #13737c;
-$heart6-primary: #00ab2e;
-$heart6-secondary: #007d17;
-$heart6-shine: #aeffcd;
-$heart6-outline: #191919;
-$heart6-outline-special: #2dcdb3;
-
-$tier7-background: #401f17;
-$heart7-primary: #8bf4e3;
-$heart7-secondary: #2dcdb3;
-$heart7-shine: #d5f8f4;
-$heart7-outline: #191919;
-$heart7-outline-special: #66473f;
-
-$tier8-background: #ffffff;
-$heart8-primary: #66473f;
-$heart8-secondary: #5d332d;
-$heart8-shine: #98857b;
-$heart8-outline: #191919;
-$heart8-outline-special: #ffffff;
+	@for $i from 0 through $tierAmount {
+		--tier#{$i}-background: #000000;
+		--heart#{$i}-primary: #000000;
+		--heart#{$i}-secondary: #000000;
+		--heart#{$i}-shine: #000000;
+		--heart#{$i}-outline: #000000;
+		--heart#{$i}-outline-special: #000000;
+	}
+}
 
 .bar {
-	border-radius: $bar-bevel;
-	border-style: $bar-border-style;
-	border-width: $bar-border-thickness;
-	border-color: $bar-border-color;
+	border-radius: var(--bar-bevel);
+	border-style: var(--bar-border-style);
+	border-width: var(--bar-border-thickness);
+	border-color: var(--bar-border-color);
 	box-sizing: border-box;
 	flex-wrap: wrap;
 	display: flex;
@@ -112,19 +60,7 @@ $heart8-outline-special: #ffffff;
 	height: 1.05em;
 }
 
-@for $i from 0 through $tierAmount {
-	.heart#{$i}-fill {
-		@include fill($primary: $heart#{$i}-primary, $secondary: $heart#{$i}-secondary, $shine: $heart#{$i}-shine);
-	}
-	.heart#{$i}-outline {
-		@include outline($color: $heart#{$i}-outline);
-	}
-	.heart#{$i}-outline-special {
-		@include outline($color: $heart#{$i}-outline-special);
-	}
-}
-
-@mixin fill($primary: DarkGray, $secondary: DarkGray, $shine: DarkGray) {
+@mixin fill($primary, $secondary, $shine) {
 	box-shadow:
 	2em 1em var($primary),
 	3em 1em var($primary),
@@ -168,7 +104,7 @@ $heart8-outline-special: #ffffff;
 	4em 7em var($secondary);
 }
 
-@mixin outline($color: DarkGray) {
+@mixin outline($color) {
 	box-shadow:
 	2em 0em var($color),
 	3em 0em var($color),
@@ -198,4 +134,16 @@ $heart8-outline-special: #ffffff;
 	5em 7em var($color),
 
 	4em 8em var($color);
+}
+
+@for $i from 0 through $tierAmount {
+	.heart#{$i}-fill {
+		@include fill($primary: --heart#{$i}-primary, $secondary: --heart#{$i}-secondary, $shine: --heart#{$i}-shine);
+	}
+	.heart#{$i}-outline {
+		@include outline($color: --heart#{$i}-outline);
+	}
+	.heart#{$i}-outline-special {
+		@include outline($color: --heart#{$i}-outline-special);
+	}
 }
