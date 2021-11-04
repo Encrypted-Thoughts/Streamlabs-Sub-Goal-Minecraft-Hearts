@@ -3,7 +3,8 @@ var progressCount = 1;
 var slData = {};
 var slSettings = {};
 var tierLimit = 110;
-var heartCount = 0;
+var heartAmount = 100;
+var totalHearts = 0;
 
 document.addEventListener('goalLoad', function(obj) {
 	console.log(obj.detail);
@@ -14,7 +15,7 @@ document.addEventListener('goalLoad', function(obj) {
 	updateGlobarVars(obj);
 	setBackground();
 
-	for (let i=1; i <= slData.target; i++)
+	for (let i=1; i <= heartAmount; i++)
 		addHeart(i);
 });
 
@@ -23,16 +24,19 @@ document.addEventListener('goalEvent', function(obj) {
 	updateGlobarVars(obj);
 	setBackground();
 
-	for (let i=1; i <= slData.target; i++)
+	for (let i=1; i <= heartAmount; i++)
 		updateHeart(i);
 });
 
 function updateGlobarVars(obj){
 	slData = obj.detail.amount;
-	heartCount = Math.floor(slData.current / slSettings.custom_json.subs_per_heart.value);
-	tierLimit = slData.target ** 2 + slData.target;
-	tierCount = Math.floor(heartCount/tierLimit);
-	progressCount = Math.floor((heartCount-(tierCount * tierLimit))/slData.target);
+	heartAmount = slSettings.custom_json.heart_amount.value;
+	totalHearts = Math.floor(slData.current / slSettings.custom_json.subs_per_heart.value);
+	tierLimit = heartAmount ** 2;
+	if (slSettings.custom_json.rank_up_point.value === "after_last")
+		tierLimit += heartAmount;
+	tierCount = Math.floor(totalHearts/tierLimit);
+	progressCount = Math.floor((totalHearts-(tierCount * tierLimit))/heartAmount);
 }
 
 function setBackground() {
@@ -88,14 +92,14 @@ function getFillClass(i) {
 			return `heart${j}-fill`;
 	}
 
-	if (i <= (heartCount-(tierCount * tierLimit))%slData.target)
+	if (i <= (totalHearts-(tierCount * tierLimit))%heartAmount)
 		return `heart${tierCount+1}-fill`;
 
 	return `heart${tierCount}-fill`
 }
 
 function getAnimateClass(i) {
-	if (heartCount < slSettings.custom_json.animate_stop_threshold.value)
+	if (totalHearts < slSettings.custom_json.animate_stop_threshold.value)
 		return `animate__animated animate__${slSettings.custom_json.animate_type_begin.value} animate__infinite animate__delay-${i%3}s`;
 	if (tierCount >= slSettings.custom_json.max_tier.value)
 		return `animate__animated animate__${slSettings.custom_json.animate_type_end.value} animate__infinite animate__delay-${i%3}s`;

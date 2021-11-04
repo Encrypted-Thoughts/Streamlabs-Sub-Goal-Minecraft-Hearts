@@ -1,4 +1,38 @@
 {
+    "heart_amount": {
+        "label": "How Many Hearts",
+        "type": "textfield",
+        "value": "10"
+    },
+    "subs_per_heart": {
+        "label": "How Many Subs Per Heart",
+        "type": "textfield",
+        "value": "1"
+    },
+    "rank_up_point": {
+        "label": "Rank Up Rollover Point",
+        "type": "dropdown",
+        "options": {
+            "at_last": "At Last Heart",
+            "after_last": "After Last Heart"
+        },
+        "value": "at_last"
+    },
+    "max_tier": {
+        "label": "Set Max Tier",
+        "type": "dropdown",
+        "options": {
+            "1": "1 Tier",
+            "2": "2 Tiers",
+            "3": "3 Tiers",
+            "4": "4 Tier",
+            "5": "5 Tiers",
+            "6": "6 Tiers",
+            "7": "7 Tier",
+            "8": "8 Tiers"
+        },
+        "value": "8"
+    },
     "bar_bevel": {
         "label": "Bar Bevel",
         "type": "slider",
@@ -37,11 +71,6 @@
         "label": "Bar Border Color",
         "type": "colorpicker",
         "value": "#292929"
-    },
-    "subs_per_heart": {
-        "label": "How Many Subs Per Heart",
-        "type": "textfield",
-        "value": "1"
     },
     "animate_type_begin": {
         "label": "Beginning Animation Type",
@@ -91,21 +120,6 @@
         "max": 5000,
         "min": 0,
         "steps": 50
-    },
-    "max_tier": {
-        "label": "Set Max Tier",
-        "type": "dropdown",
-        "options": {
-            "1": "1 Tier",
-            "2": "2 Tiers",
-            "3": "3 Tiers",
-            "4": "4 Tier",
-            "5": "5 Tiers",
-            "6": "6 Tiers",
-            "7": "7 Tier",
-            "8": "8 Tiers"
-        },
-        "value": "8"
     },
     "empty_background": {
         "label": "Empty - Background",
