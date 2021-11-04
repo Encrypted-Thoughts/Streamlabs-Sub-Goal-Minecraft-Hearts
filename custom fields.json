@@ -1,0 +1,360 @@
+{
+    "bar_bevel": {
+        "label": "Bar Bevel",
+        "type": "slider",
+        "name": "",
+        "value": 25,
+        "max": 200,
+        "min": 0,
+        "steps": 1
+    },
+    "bar_border_style": {
+        "label": "Bar Border Style",
+        "type": "dropdown",
+        "options": {
+            "dotted": "Dotted",
+            "dashed": "Dashed",
+            "solid": "Solid",
+            "double": "Double",
+            "groove": "Groove",
+            "ridge": "Ridge",
+            "inset": "Inset",
+            "outset": "Outset",
+            "none": "None"
+        },
+        "value": "solid"
+    },
+    "bar_border_thickness": {
+        "label": "Bar Border Thickness",
+        "type": "slider",
+        "name": "",
+        "value": 10,
+        "max": 100,
+        "min": 0,
+        "steps": 1
+    },
+    "bar_border_color": {
+        "label": "Bar Border Color",
+        "type": "colorpicker",
+        "value": "#292929"
+    },
+    "subs_per_heart": {
+        "label": "How Many Subs Per Heart",
+        "type": "textfield",
+        "value": "1"
+    },
+    "animate_type_begin": {
+        "label": "Beginning Animation Type",
+        "type": "dropdown",
+        "options": {
+            "updown": "Up Down",
+            "bounce": "Bounce",
+            "shakeY": "Shake",
+            "pulse": "Pulse",
+            "heartBeat": "Heartbeat",
+            "flip": "Flip"
+        },
+        "value": "shakeY"
+    },
+    "animate_type_end": {
+        "label": "Ending Animation Type",
+        "type": "dropdown",
+        "options": {
+            "updown": "Up Down",
+            "bounce": "Bounce",
+            "shakeY": "Shake",
+            "pulse": "Pulse",
+            "heartBeat": "Heartbeat",
+            "flip": "Flip"
+        },
+        "value": "bounce"
+    },
+    "animate_stop_threshold": {
+        "label": "Stop Animation After This Sub Amount",
+        "type": "textfield",
+        "value": "4"
+    },
+    "animate_duration": {
+        "label": "Animation Duration",
+        "type": "slider",
+        "name": "",
+        "value": 1500,
+        "max": 5000,
+        "min": 0,
+        "steps": 50
+    },
+    "animate_delay": {
+        "label": "Animation Delay",
+        "type": "slider",
+        "name": "",
+        "value": 1000,
+        "max": 5000,
+        "min": 0,
+        "steps": 50
+    },
+    "max_tier": {
+        "label": "Set Max Tier",
+        "type": "dropdown",
+        "options": {
+            "1": "1 Tier",
+            "2": "2 Tiers",
+            "3": "3 Tiers",
+            "4": "4 Tier",
+            "5": "5 Tiers",
+            "6": "6 Tiers",
+            "7": "7 Tier",
+            "8": "8 Tiers"
+        },
+        "value": "8"
+    },
+    "empty_background": {
+        "label": "Empty - Background",
+        "type": "colorpicker",
+        "value": "#000000"
+    },
+    "empty_primary": {
+        "label": "Empty Heart - Primary",
+        "type": "colorpicker",
+        "value": "#353535"
+    },
+    "tier1_background": {
+        "label": "Tier 1 - Background",
+        "type": "colorpicker",
+        "value": "#9b4428"
+    },
+    "heart1_primary": {
+        "label": "Heart 1 - Primary",
+        "type": "colorpicker",
+        "value": "#ff1313"
+    },
+    "heart1_secondary": {
+        "label": "Heart 1 - Secondary",
+        "type": "colorpicker",
+        "value": "#bb1313"
+    },
+    "heart1_shine": {
+        "label": "Heart 1 - Shine",
+        "type": "colorpicker",
+        "value": "#ffffff"
+    },
+    "heart1_outline": {
+        "label": "Heart 1 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart1_outline_special": {
+        "label": "Heart 1 - Outline Special",
+        "type": "colorpicker",
+        "value": "#e47c56"
+    },
+    "tier2_background": {
+        "label": "Tier 2 - Background",
+        "type": "colorpicker",
+        "value": "#737373"
+    },
+    "heart2_primary": {
+        "label": "Heart 2 - Primary",
+        "type": "colorpicker",
+        "value": "#e47c56"
+    },
+    "heart2_secondary": {
+        "label": "Heart 2 - Secondary",
+        "type": "colorpicker",
+        "value": "#c15938"
+    },
+    "heart2_shine": {
+        "label": "Heart 2 - Shine",
+        "type": "colorpicker",
+        "value": "#ffc2b2"
+    },
+    "heart2_outline": {
+        "label": "Heart 2 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart2_outline_special": {
+        "label": "Heart 2 - Outline Special",
+        "type": "colorpicker",
+        "value": "#d9d9d9"
+    },
+    "tier3_background": {
+        "label": "Tier 3 - Background",
+        "type": "colorpicker",
+        "value": "#bc880a"
+    },
+    "heart3_primary": {
+        "label": "Heart 3 - Primary",
+        "type": "colorpicker",
+        "value": "#d9d9d9"
+    },
+    "heart3_secondary": {
+        "label": "Heart 3 - Secondary",
+        "type": "colorpicker",
+        "value": "#a9a9a9"
+    },
+    "heart3_shine": {
+        "label": "Heart 3 - Shine",
+        "type": "colorpicker",
+        "value": "#fefefe"
+    },
+    "heart3_outline": {
+        "label": "Heart 3 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart3_outline_special": {
+        "label": "Heart 3 - Outline Special",
+        "type": "colorpicker",
+        "value": "#f5b20f"
+    },
+    "tier4_background": {
+        "label": "Tier 4 - Background",
+        "type": "colorpicker",
+        "value": "#11418f"
+    },
+    "heart4_primary": {
+        "label": "Heart 4 - Primary",
+        "type": "colorpicker",
+        "value": "#f5b20f"
+    },
+    "heart4_secondary": {
+        "label": "Heart 4 - Secondary",
+        "type": "colorpicker",
+        "value": "#bc880a"
+    },
+    "heart4_shine": {
+        "label": "Heart 4 - Shine",
+        "type": "colorpicker",
+        "value": "#fbc443"
+    },
+    "heart4_outline": {
+        "label": "Heart 4 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart4_outline_special": {
+        "label": "Heart 4 - Outline Special",
+        "type": "colorpicker",
+        "value": "#5b85df"
+    },
+    "tier5_background": {
+        "label": "Tier 5 - Background",
+        "type": "colorpicker",
+        "value": "#012d01"
+    },
+    "heart5_primary": {
+        "label": "Heart 5 - Primary",
+        "type": "colorpicker",
+        "value": "#5b85df"
+    },
+    "heart5_secondary": {
+        "label": "Heart 5 - Secondary",
+        "type": "colorpicker",
+        "value": "#3061c2"
+    },
+    "heart5_shine": {
+        "label": "Heart 5 - Shine",
+        "type": "colorpicker",
+        "value": "#7299ed"
+    },
+    "heart5_outline": {
+        "label": "Heart 5 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart5_outline_special": {
+        "label": "Heart 5 - Outline Special",
+        "type": "colorpicker",
+        "value": "#00ab2e"
+    },
+    "tier6_background": {
+        "label": "Tier 6 - Background",
+        "type": "colorpicker",
+        "value": "#13737c"
+    },
+    "heart6_primary": {
+        "label": "Heart 6 - Primary",
+        "type": "colorpicker",
+        "value": "#00ab2e"
+    },
+    "heart6_secondary": {
+        "label": "Heart 6 - Secondary",
+        "type": "colorpicker",
+        "value": "#007d17"
+    },
+    "heart6_shine": {
+        "label": "Heart 6 - Shine",
+        "type": "colorpicker",
+        "value": "#aeffcd"
+    },
+    "heart6_outline": {
+        "label": "Heart 6 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart6_outline_special": {
+        "label": "Heart 6 - Outline Special",
+        "type": "colorpicker",
+        "value": "#2dcdb3"
+    },
+    "tier7_background": {
+        "label": "Tier 7 - Background",
+        "type": "colorpicker",
+        "value": "#401f17"
+    },
+    "heart7_primary": {
+        "label": "Heart 7 - Primary",
+        "type": "colorpicker",
+        "value": "#8bf4e3"
+    },
+    "heart7_secondary": {
+        "label": "Heart 7 - Secondary",
+        "type": "colorpicker",
+        "value": "#2dcdb3"
+    },
+    "heart7_shine": {
+        "label": "Heart 7 - Shine",
+        "type": "colorpicker",
+        "value": "#d5f8f4"
+    },
+    "heart7_outline": {
+        "label": "Heart 7 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart7_outline_special": {
+        "label": "Heart 7 - Outline Special",
+        "type": "colorpicker",
+        "value": "#66473f"
+    },
+    "tier8_background": {
+        "label": "Tier 8 - Background",
+        "type": "colorpicker",
+        "value": "#ffffff"
+    },
+    "heart8_primary": {
+        "label": "Heart 8 - Primary",
+        "type": "colorpicker",
+        "value": "#66473f"
+    },
+    "heart8_secondary": {
+        "label": "Heart 8 - Secondary",
+        "type": "colorpicker",
+        "value": "#5d332d"
+    },
+    "heart8_shine": {
+        "label": "Heart 8 - Shine",
+        "type": "colorpicker",
+        "value": "#98857b"
+    },
+    "heart8_outline": {
+        "label": "Heart 8 - Outline",
+        "type": "colorpicker",
+        "value": "#191919"
+    },
+    "heart8_outline_special": {
+        "label": "Heart 8 - Outline Special",
+        "type": "colorpicker",
+        "value": "#ffffff"
+    }
+}

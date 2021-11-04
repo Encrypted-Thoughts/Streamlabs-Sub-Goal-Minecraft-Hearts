@@ -1,0 +1,258 @@
+/* All html objects will be wrapped in the #wrap div */
+:root {
+  --bar-bevel: 25px;
+  --bar-border-color: #000000;
+  --bar-border-thickness: 5px;
+  --bar-border-style: solid;
+  --animate-duration: 1500ms;
+  --animate-delay: 1s;
+  --empty-background: #000000;
+  --empty-primary: #353535;
+  --tier1-background: #9b4428;
+  --heart1-primary: #ff1313;
+  --heart1-secondary: #bb1313;
+  --heart1-shine: #ffffff;
+  --heart1-outline: #191919;
+  --heart1-outline-special: #e47c56;
+  --tier2-background: #737373;
+  --heart2-primary: #e47c56;
+  --heart2-secondary: #c15938;
+  --heart2-shine: #ffc2b2;
+  --heart2-outline: #191919;
+  --heart2-outline-special: #d9d9d9;
+  --tier3-background: #bc880a;
+  --heart3-primary: #d9d9d9;
+  --heart3-secondary: #a9a9a9;
+  --heart3-shine: #fefefe;
+  --heart3-outline: #191919;
+  --heart3-outline-special: #f5b20f;
+  --tier4-background: #ffffff;
+  --heart4-primary: #8bf4e3;
+  --heart4-secondary: #2dcdb3;
+  --heart4-shine: #fbc443;
+  --heart4-outline: #191919;
+  --heart4-outline-special: #5b85df;
+  --tier5-background: #012d01;
+  --heart5-primary: #5b85df;
+  --heart5-secondary: #3061c2;
+  --heart5-shine: #7299ed;
+  --heart5-outline: #191919;
+  --heart5-outline-special: #00ab2e;
+  --tier6-background: #13737c;
+  --heart6-primary: #00ab2e;
+  --heart6-secondary: #007d17;
+  --heart6-shine: #aeffcd;
+  --heart6-outline: #191919;
+  --heart6-outline-special: #2dcdb3;
+  --tier7-background: #401f17;
+  --heart7-primary: #8bf4e3;
+  --heart7-secondary: #2dcdb3;
+  --heart7-shine: #d5f8f4;
+  --heart7-outline: #191919;
+  --heart7-outline-special: #66473f;
+  --tier8-background: #ffffff;
+  --heart8-primary: #66473f;
+  --heart8-secondary: #5d332d;
+  --heart8-shine: #98857b;
+  --heart8-outline: #191919;
+  --heart8-outline-special: #ffffff;
+}
+
+.bar {
+  border-radius: var(--bar-bevel);
+  border-style: var(--bar-border-style);
+  border-width: var(--bar-border-thickness);
+  border-color: var(--bar-border-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.animate__updown {
+  -webkit-animation-name: updown;
+          animation-name: updown;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  50% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+
+@keyframes updown {
+  0% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+  50% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+
+.heart-container {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 9em;
+  min-width: 9em;
+  padding-left: 1em;
+}
+
+.block {
+  position: absolute;
+}
+
+.heart {
+  display: block;
+  width: 1.05em;
+  height: 1.05em;
+}
+
+.empty-fill {
+  -webkit-box-shadow: 2em 1em var(--empty-primary), 3em 1em var(--empty-primary), 5em 1em var(--empty-primary), 6em 1em var(--empty-primary), 1em 2em var(--empty-primary), 2em 2em var(--empty-primary), 3em 2em var(--empty-primary), 4em 2em var(--empty-primary), 5em 2em var(--empty-primary), 6em 2em var(--empty-primary), 7em 2em var(--empty-primary), 1em 3em var(--empty-primary), 2em 3em var(--empty-primary), 3em 3em var(--empty-primary), 4em 3em var(--empty-primary), 5em 3em var(--empty-primary), 6em 3em var(--empty-primary), 7em 3em var(--empty-primary), 1em 4em var(--empty-primary), 2em 4em var(--empty-primary), 3em 4em var(--empty-primary), 4em 4em var(--empty-primary), 5em 4em var(--empty-primary), 6em 4em var(--empty-primary), 7em 4em var(--empty-primary), 2em 5em var(--empty-primary), 3em 5em var(--empty-primary), 4em 5em var(--empty-primary), 5em 5em var(--empty-primary), 6em 5em var(--empty-primary), 3em 6em var(--empty-primary), 4em 6em var(--empty-primary), 5em 6em var(--empty-primary), 4em 7em var(--empty-primary);
+          box-shadow: 2em 1em var(--empty-primary), 3em 1em var(--empty-primary), 5em 1em var(--empty-primary), 6em 1em var(--empty-primary), 1em 2em var(--empty-primary), 2em 2em var(--empty-primary), 3em 2em var(--empty-primary), 4em 2em var(--empty-primary), 5em 2em var(--empty-primary), 6em 2em var(--empty-primary), 7em 2em var(--empty-primary), 1em 3em var(--empty-primary), 2em 3em var(--empty-primary), 3em 3em var(--empty-primary), 4em 3em var(--empty-primary), 5em 3em var(--empty-primary), 6em 3em var(--empty-primary), 7em 3em var(--empty-primary), 1em 4em var(--empty-primary), 2em 4em var(--empty-primary), 3em 4em var(--empty-primary), 4em 4em var(--empty-primary), 5em 4em var(--empty-primary), 6em 4em var(--empty-primary), 7em 4em var(--empty-primary), 2em 5em var(--empty-primary), 3em 5em var(--empty-primary), 4em 5em var(--empty-primary), 5em 5em var(--empty-primary), 6em 5em var(--empty-primary), 3em 6em var(--empty-primary), 4em 6em var(--empty-primary), 5em 6em var(--empty-primary), 4em 7em var(--empty-primary);
+}
+
+.heart1-fill {
+  -webkit-box-shadow: 2em 1em var(--heart1-primary), 3em 1em var(--heart1-primary), 5em 1em var(--heart1-primary), 6em 1em var(--heart1-primary), 1em 2em var(--heart1-primary), 2em 2em var(--heart1-shine), 3em 2em var(--heart1-primary), 4em 2em var(--heart1-primary), 5em 2em var(--heart1-primary), 6em 2em var(--heart1-primary), 7em 2em var(--heart1-primary), 1em 3em var(--heart1-primary), 2em 3em var(--heart1-primary), 3em 3em var(--heart1-primary), 4em 3em var(--heart1-primary), 5em 3em var(--heart1-primary), 6em 3em var(--heart1-primary), 7em 3em var(--heart1-primary), 1em 4em var(--heart1-secondary), 2em 4em var(--heart1-primary), 3em 4em var(--heart1-primary), 4em 4em var(--heart1-primary), 5em 4em var(--heart1-primary), 6em 4em var(--heart1-primary), 7em 4em var(--heart1-secondary), 2em 5em var(--heart1-secondary), 3em 5em var(--heart1-primary), 4em 5em var(--heart1-primary), 5em 5em var(--heart1-primary), 6em 5em var(--heart1-secondary), 3em 6em var(--heart1-secondary), 4em 6em var(--heart1-primary), 5em 6em var(--heart1-secondary), 4em 7em var(--heart1-secondary);
+          box-shadow: 2em 1em var(--heart1-primary), 3em 1em var(--heart1-primary), 5em 1em var(--heart1-primary), 6em 1em var(--heart1-primary), 1em 2em var(--heart1-primary), 2em 2em var(--heart1-shine), 3em 2em var(--heart1-primary), 4em 2em var(--heart1-primary), 5em 2em var(--heart1-primary), 6em 2em var(--heart1-primary), 7em 2em var(--heart1-primary), 1em 3em var(--heart1-primary), 2em 3em var(--heart1-primary), 3em 3em var(--heart1-primary), 4em 3em var(--heart1-primary), 5em 3em var(--heart1-primary), 6em 3em var(--heart1-primary), 7em 3em var(--heart1-primary), 1em 4em var(--heart1-secondary), 2em 4em var(--heart1-primary), 3em 4em var(--heart1-primary), 4em 4em var(--heart1-primary), 5em 4em var(--heart1-primary), 6em 4em var(--heart1-primary), 7em 4em var(--heart1-secondary), 2em 5em var(--heart1-secondary), 3em 5em var(--heart1-primary), 4em 5em var(--heart1-primary), 5em 5em var(--heart1-primary), 6em 5em var(--heart1-secondary), 3em 6em var(--heart1-secondary), 4em 6em var(--heart1-primary), 5em 6em var(--heart1-secondary), 4em 7em var(--heart1-secondary);
+}
+
+.heart2-fill {
+  -webkit-box-shadow: 2em 1em var(--heart2-primary), 3em 1em var(--heart2-primary), 5em 1em var(--heart2-primary), 6em 1em var(--heart2-primary), 1em 2em var(--heart2-primary), 2em 2em var(--heart2-shine), 3em 2em var(--heart2-primary), 4em 2em var(--heart2-primary), 5em 2em var(--heart2-primary), 6em 2em var(--heart2-primary), 7em 2em var(--heart2-primary), 1em 3em var(--heart2-primary), 2em 3em var(--heart2-primary), 3em 3em var(--heart2-primary), 4em 3em var(--heart2-primary), 5em 3em var(--heart2-primary), 6em 3em var(--heart2-primary), 7em 3em var(--heart2-primary), 1em 4em var(--heart2-secondary), 2em 4em var(--heart2-primary), 3em 4em var(--heart2-primary), 4em 4em var(--heart2-primary), 5em 4em var(--heart2-primary), 6em 4em var(--heart2-primary), 7em 4em var(--heart2-secondary), 2em 5em var(--heart2-secondary), 3em 5em var(--heart2-primary), 4em 5em var(--heart2-primary), 5em 5em var(--heart2-primary), 6em 5em var(--heart2-secondary), 3em 6em var(--heart2-secondary), 4em 6em var(--heart2-primary), 5em 6em var(--heart2-secondary), 4em 7em var(--heart2-secondary);
+          box-shadow: 2em 1em var(--heart2-primary), 3em 1em var(--heart2-primary), 5em 1em var(--heart2-primary), 6em 1em var(--heart2-primary), 1em 2em var(--heart2-primary), 2em 2em var(--heart2-shine), 3em 2em var(--heart2-primary), 4em 2em var(--heart2-primary), 5em 2em var(--heart2-primary), 6em 2em var(--heart2-primary), 7em 2em var(--heart2-primary), 1em 3em var(--heart2-primary), 2em 3em var(--heart2-primary), 3em 3em var(--heart2-primary), 4em 3em var(--heart2-primary), 5em 3em var(--heart2-primary), 6em 3em var(--heart2-primary), 7em 3em var(--heart2-primary), 1em 4em var(--heart2-secondary), 2em 4em var(--heart2-primary), 3em 4em var(--heart2-primary), 4em 4em var(--heart2-primary), 5em 4em var(--heart2-primary), 6em 4em var(--heart2-primary), 7em 4em var(--heart2-secondary), 2em 5em var(--heart2-secondary), 3em 5em var(--heart2-primary), 4em 5em var(--heart2-primary), 5em 5em var(--heart2-primary), 6em 5em var(--heart2-secondary), 3em 6em var(--heart2-secondary), 4em 6em var(--heart2-primary), 5em 6em var(--heart2-secondary), 4em 7em var(--heart2-secondary);
+}
+
+.heart3-fill {
+  -webkit-box-shadow: 2em 1em var(--heart3-primary), 3em 1em var(--heart3-primary), 5em 1em var(--heart3-primary), 6em 1em var(--heart3-primary), 1em 2em var(--heart3-primary), 2em 2em var(--heart3-shine), 3em 2em var(--heart3-primary), 4em 2em var(--heart3-primary), 5em 2em var(--heart3-primary), 6em 2em var(--heart3-primary), 7em 2em var(--heart3-primary), 1em 3em var(--heart3-primary), 2em 3em var(--heart3-primary), 3em 3em var(--heart3-primary), 4em 3em var(--heart3-primary), 5em 3em var(--heart3-primary), 6em 3em var(--heart3-primary), 7em 3em var(--heart3-primary), 1em 4em var(--heart3-secondary), 2em 4em var(--heart3-primary), 3em 4em var(--heart3-primary), 4em 4em var(--heart3-primary), 5em 4em var(--heart3-primary), 6em 4em var(--heart3-primary), 7em 4em var(--heart3-secondary), 2em 5em var(--heart3-secondary), 3em 5em var(--heart3-primary), 4em 5em var(--heart3-primary), 5em 5em var(--heart3-primary), 6em 5em var(--heart3-secondary), 3em 6em var(--heart3-secondary), 4em 6em var(--heart3-primary), 5em 6em var(--heart3-secondary), 4em 7em var(--heart3-secondary);
+          box-shadow: 2em 1em var(--heart3-primary), 3em 1em var(--heart3-primary), 5em 1em var(--heart3-primary), 6em 1em var(--heart3-primary), 1em 2em var(--heart3-primary), 2em 2em var(--heart3-shine), 3em 2em var(--heart3-primary), 4em 2em var(--heart3-primary), 5em 2em var(--heart3-primary), 6em 2em var(--heart3-primary), 7em 2em var(--heart3-primary), 1em 3em var(--heart3-primary), 2em 3em var(--heart3-primary), 3em 3em var(--heart3-primary), 4em 3em var(--heart3-primary), 5em 3em var(--heart3-primary), 6em 3em var(--heart3-primary), 7em 3em var(--heart3-primary), 1em 4em var(--heart3-secondary), 2em 4em var(--heart3-primary), 3em 4em var(--heart3-primary), 4em 4em var(--heart3-primary), 5em 4em var(--heart3-primary), 6em 4em var(--heart3-primary), 7em 4em var(--heart3-secondary), 2em 5em var(--heart3-secondary), 3em 5em var(--heart3-primary), 4em 5em var(--heart3-primary), 5em 5em var(--heart3-primary), 6em 5em var(--heart3-secondary), 3em 6em var(--heart3-secondary), 4em 6em var(--heart3-primary), 5em 6em var(--heart3-secondary), 4em 7em var(--heart3-secondary);
+}
+
+.heart4-fill {
+  -webkit-box-shadow: 2em 1em var(--heart4-primary), 3em 1em var(--heart4-primary), 5em 1em var(--heart4-primary), 6em 1em var(--heart4-primary), 1em 2em var(--heart4-primary), 2em 2em var(--heart4-shine), 3em 2em var(--heart4-primary), 4em 2em var(--heart4-primary), 5em 2em var(--heart4-primary), 6em 2em var(--heart4-primary), 7em 2em var(--heart4-primary), 1em 3em var(--heart4-primary), 2em 3em var(--heart4-primary), 3em 3em var(--heart4-primary), 4em 3em var(--heart4-primary), 5em 3em var(--heart4-primary), 6em 3em var(--heart4-primary), 7em 3em var(--heart4-primary), 1em 4em var(--heart4-secondary), 2em 4em var(--heart4-primary), 3em 4em var(--heart4-primary), 4em 4em var(--heart4-primary), 5em 4em var(--heart4-primary), 6em 4em var(--heart4-primary), 7em 4em var(--heart4-secondary), 2em 5em var(--heart4-secondary), 3em 5em var(--heart4-primary), 4em 5em var(--heart4-primary), 5em 5em var(--heart4-primary), 6em 5em var(--heart4-secondary), 3em 6em var(--heart4-secondary), 4em 6em var(--heart4-primary), 5em 6em var(--heart4-secondary), 4em 7em var(--heart4-secondary);
+          box-shadow: 2em 1em var(--heart4-primary), 3em 1em var(--heart4-primary), 5em 1em var(--heart4-primary), 6em 1em var(--heart4-primary), 1em 2em var(--heart4-primary), 2em 2em var(--heart4-shine), 3em 2em var(--heart4-primary), 4em 2em var(--heart4-primary), 5em 2em var(--heart4-primary), 6em 2em var(--heart4-primary), 7em 2em var(--heart4-primary), 1em 3em var(--heart4-primary), 2em 3em var(--heart4-primary), 3em 3em var(--heart4-primary), 4em 3em var(--heart4-primary), 5em 3em var(--heart4-primary), 6em 3em var(--heart4-primary), 7em 3em var(--heart4-primary), 1em 4em var(--heart4-secondary), 2em 4em var(--heart4-primary), 3em 4em var(--heart4-primary), 4em 4em var(--heart4-primary), 5em 4em var(--heart4-primary), 6em 4em var(--heart4-primary), 7em 4em var(--heart4-secondary), 2em 5em var(--heart4-secondary), 3em 5em var(--heart4-primary), 4em 5em var(--heart4-primary), 5em 5em var(--heart4-primary), 6em 5em var(--heart4-secondary), 3em 6em var(--heart4-secondary), 4em 6em var(--heart4-primary), 5em 6em var(--heart4-secondary), 4em 7em var(--heart4-secondary);
+}
+
+.heart5-fill {
+  -webkit-box-shadow: 2em 1em var(--heart5-primary), 3em 1em var(--heart5-primary), 5em 1em var(--heart5-primary), 6em 1em var(--heart5-primary), 1em 2em var(--heart5-primary), 2em 2em var(--heart5-shine), 3em 2em var(--heart5-primary), 4em 2em var(--heart5-primary), 5em 2em var(--heart5-primary), 6em 2em var(--heart5-primary), 7em 2em var(--heart5-primary), 1em 3em var(--heart5-primary), 2em 3em var(--heart5-primary), 3em 3em var(--heart5-primary), 4em 3em var(--heart5-primary), 5em 3em var(--heart5-primary), 6em 3em var(--heart5-primary), 7em 3em var(--heart5-primary), 1em 4em var(--heart5-secondary), 2em 4em var(--heart5-primary), 3em 4em var(--heart5-primary), 4em 4em var(--heart5-primary), 5em 4em var(--heart5-primary), 6em 4em var(--heart5-primary), 7em 4em var(--heart5-secondary), 2em 5em var(--heart5-secondary), 3em 5em var(--heart5-primary), 4em 5em var(--heart5-primary), 5em 5em var(--heart5-primary), 6em 5em var(--heart5-secondary), 3em 6em var(--heart5-secondary), 4em 6em var(--heart5-primary), 5em 6em var(--heart5-secondary), 4em 7em var(--heart5-secondary);
+          box-shadow: 2em 1em var(--heart5-primary), 3em 1em var(--heart5-primary), 5em 1em var(--heart5-primary), 6em 1em var(--heart5-primary), 1em 2em var(--heart5-primary), 2em 2em var(--heart5-shine), 3em 2em var(--heart5-primary), 4em 2em var(--heart5-primary), 5em 2em var(--heart5-primary), 6em 2em var(--heart5-primary), 7em 2em var(--heart5-primary), 1em 3em var(--heart5-primary), 2em 3em var(--heart5-primary), 3em 3em var(--heart5-primary), 4em 3em var(--heart5-primary), 5em 3em var(--heart5-primary), 6em 3em var(--heart5-primary), 7em 3em var(--heart5-primary), 1em 4em var(--heart5-secondary), 2em 4em var(--heart5-primary), 3em 4em var(--heart5-primary), 4em 4em var(--heart5-primary), 5em 4em var(--heart5-primary), 6em 4em var(--heart5-primary), 7em 4em var(--heart5-secondary), 2em 5em var(--heart5-secondary), 3em 5em var(--heart5-primary), 4em 5em var(--heart5-primary), 5em 5em var(--heart5-primary), 6em 5em var(--heart5-secondary), 3em 6em var(--heart5-secondary), 4em 6em var(--heart5-primary), 5em 6em var(--heart5-secondary), 4em 7em var(--heart5-secondary);
+}
+
+.heart6-fill {
+  -webkit-box-shadow: 2em 1em var(--heart6-primary), 3em 1em var(--heart6-primary), 5em 1em var(--heart6-primary), 6em 1em var(--heart6-primary), 1em 2em var(--heart6-primary), 2em 2em var(--heart6-shine), 3em 2em var(--heart6-primary), 4em 2em var(--heart6-primary), 5em 2em var(--heart6-primary), 6em 2em var(--heart6-primary), 7em 2em var(--heart6-primary), 1em 3em var(--heart6-primary), 2em 3em var(--heart6-primary), 3em 3em var(--heart6-primary), 4em 3em var(--heart6-primary), 5em 3em var(--heart6-primary), 6em 3em var(--heart6-primary), 7em 3em var(--heart6-primary), 1em 4em var(--heart6-secondary), 2em 4em var(--heart6-primary), 3em 4em var(--heart6-primary), 4em 4em var(--heart6-primary), 5em 4em var(--heart6-primary), 6em 4em var(--heart6-primary), 7em 4em var(--heart6-secondary), 2em 5em var(--heart6-secondary), 3em 5em var(--heart6-primary), 4em 5em var(--heart6-primary), 5em 5em var(--heart6-primary), 6em 5em var(--heart6-secondary), 3em 6em var(--heart6-secondary), 4em 6em var(--heart6-primary), 5em 6em var(--heart6-secondary), 4em 7em var(--heart6-secondary);
+          box-shadow: 2em 1em var(--heart6-primary), 3em 1em var(--heart6-primary), 5em 1em var(--heart6-primary), 6em 1em var(--heart6-primary), 1em 2em var(--heart6-primary), 2em 2em var(--heart6-shine), 3em 2em var(--heart6-primary), 4em 2em var(--heart6-primary), 5em 2em var(--heart6-primary), 6em 2em var(--heart6-primary), 7em 2em var(--heart6-primary), 1em 3em var(--heart6-primary), 2em 3em var(--heart6-primary), 3em 3em var(--heart6-primary), 4em 3em var(--heart6-primary), 5em 3em var(--heart6-primary), 6em 3em var(--heart6-primary), 7em 3em var(--heart6-primary), 1em 4em var(--heart6-secondary), 2em 4em var(--heart6-primary), 3em 4em var(--heart6-primary), 4em 4em var(--heart6-primary), 5em 4em var(--heart6-primary), 6em 4em var(--heart6-primary), 7em 4em var(--heart6-secondary), 2em 5em var(--heart6-secondary), 3em 5em var(--heart6-primary), 4em 5em var(--heart6-primary), 5em 5em var(--heart6-primary), 6em 5em var(--heart6-secondary), 3em 6em var(--heart6-secondary), 4em 6em var(--heart6-primary), 5em 6em var(--heart6-secondary), 4em 7em var(--heart6-secondary);
+}
+
+.heart7-fill {
+  -webkit-box-shadow: 2em 1em var(--heart7-primary), 3em 1em var(--heart7-primary), 5em 1em var(--heart7-primary), 6em 1em var(--heart7-primary), 1em 2em var(--heart7-primary), 2em 2em var(--heart7-shine), 3em 2em var(--heart7-primary), 4em 2em var(--heart7-primary), 5em 2em var(--heart7-primary), 6em 2em var(--heart7-primary), 7em 2em var(--heart7-primary), 1em 3em var(--heart7-primary), 2em 3em var(--heart7-primary), 3em 3em var(--heart7-primary), 4em 3em var(--heart7-primary), 5em 3em var(--heart7-primary), 6em 3em var(--heart7-primary), 7em 3em var(--heart7-primary), 1em 4em var(--heart7-secondary), 2em 4em var(--heart7-primary), 3em 4em var(--heart7-primary), 4em 4em var(--heart7-primary), 5em 4em var(--heart7-primary), 6em 4em var(--heart7-primary), 7em 4em var(--heart7-secondary), 2em 5em var(--heart7-secondary), 3em 5em var(--heart7-primary), 4em 5em var(--heart7-primary), 5em 5em var(--heart7-primary), 6em 5em var(--heart7-secondary), 3em 6em var(--heart7-secondary), 4em 6em var(--heart7-primary), 5em 6em var(--heart7-secondary), 4em 7em var(--heart7-secondary);
+          box-shadow: 2em 1em var(--heart7-primary), 3em 1em var(--heart7-primary), 5em 1em var(--heart7-primary), 6em 1em var(--heart7-primary), 1em 2em var(--heart7-primary), 2em 2em var(--heart7-shine), 3em 2em var(--heart7-primary), 4em 2em var(--heart7-primary), 5em 2em var(--heart7-primary), 6em 2em var(--heart7-primary), 7em 2em var(--heart7-primary), 1em 3em var(--heart7-primary), 2em 3em var(--heart7-primary), 3em 3em var(--heart7-primary), 4em 3em var(--heart7-primary), 5em 3em var(--heart7-primary), 6em 3em var(--heart7-primary), 7em 3em var(--heart7-primary), 1em 4em var(--heart7-secondary), 2em 4em var(--heart7-primary), 3em 4em var(--heart7-primary), 4em 4em var(--heart7-primary), 5em 4em var(--heart7-primary), 6em 4em var(--heart7-primary), 7em 4em var(--heart7-secondary), 2em 5em var(--heart7-secondary), 3em 5em var(--heart7-primary), 4em 5em var(--heart7-primary), 5em 5em var(--heart7-primary), 6em 5em var(--heart7-secondary), 3em 6em var(--heart7-secondary), 4em 6em var(--heart7-primary), 5em 6em var(--heart7-secondary), 4em 7em var(--heart7-secondary);
+}
+
+.heart8-fill {
+  -webkit-box-shadow: 2em 1em var(--heart8-primary), 3em 1em var(--heart8-primary), 5em 1em var(--heart8-primary), 6em 1em var(--heart8-primary), 1em 2em var(--heart8-primary), 2em 2em var(--heart8-shine), 3em 2em var(--heart8-primary), 4em 2em var(--heart8-primary), 5em 2em var(--heart8-primary), 6em 2em var(--heart8-primary), 7em 2em var(--heart8-primary), 1em 3em var(--heart8-primary), 2em 3em var(--heart8-primary), 3em 3em var(--heart8-primary), 4em 3em var(--heart8-primary), 5em 3em var(--heart8-primary), 6em 3em var(--heart8-primary), 7em 3em var(--heart8-primary), 1em 4em var(--heart8-secondary), 2em 4em var(--heart8-primary), 3em 4em var(--heart8-primary), 4em 4em var(--heart8-primary), 5em 4em var(--heart8-primary), 6em 4em var(--heart8-primary), 7em 4em var(--heart8-secondary), 2em 5em var(--heart8-secondary), 3em 5em var(--heart8-primary), 4em 5em var(--heart8-primary), 5em 5em var(--heart8-primary), 6em 5em var(--heart8-secondary), 3em 6em var(--heart8-secondary), 4em 6em var(--heart8-primary), 5em 6em var(--heart8-secondary), 4em 7em var(--heart8-secondary);
+          box-shadow: 2em 1em var(--heart8-primary), 3em 1em var(--heart8-primary), 5em 1em var(--heart8-primary), 6em 1em var(--heart8-primary), 1em 2em var(--heart8-primary), 2em 2em var(--heart8-shine), 3em 2em var(--heart8-primary), 4em 2em var(--heart8-primary), 5em 2em var(--heart8-primary), 6em 2em var(--heart8-primary), 7em 2em var(--heart8-primary), 1em 3em var(--heart8-primary), 2em 3em var(--heart8-primary), 3em 3em var(--heart8-primary), 4em 3em var(--heart8-primary), 5em 3em var(--heart8-primary), 6em 3em var(--heart8-primary), 7em 3em var(--heart8-primary), 1em 4em var(--heart8-secondary), 2em 4em var(--heart8-primary), 3em 4em var(--heart8-primary), 4em 4em var(--heart8-primary), 5em 4em var(--heart8-primary), 6em 4em var(--heart8-primary), 7em 4em var(--heart8-secondary), 2em 5em var(--heart8-secondary), 3em 5em var(--heart8-primary), 4em 5em var(--heart8-primary), 5em 5em var(--heart8-primary), 6em 5em var(--heart8-secondary), 3em 6em var(--heart8-secondary), 4em 6em var(--heart8-primary), 5em 6em var(--heart8-secondary), 4em 7em var(--heart8-secondary);
+}
+
+.heart1-outline {
+  -webkit-box-shadow: 2em 0em var(--heart1-outline), 3em 0em var(--heart1-outline), 5em 0em var(--heart1-outline), 6em 0em var(--heart1-outline), 1em 1em var(--heart1-outline), 4em 1em var(--heart1-outline), 7em 1em var(--heart1-outline), 0em 2em var(--heart1-outline), 8em 2em var(--heart1-outline), 0em 3em var(--heart1-outline), 8em 3em var(--heart1-outline), 0em 4em var(--heart1-outline), 8em 4em var(--heart1-outline), 1em 5em var(--heart1-outline), 7em 5em var(--heart1-outline), 2em 6em var(--heart1-outline), 6em 6em var(--heart1-outline), 3em 7em var(--heart1-outline), 5em 7em var(--heart1-outline), 4em 8em var(--heart1-outline);
+          box-shadow: 2em 0em var(--heart1-outline), 3em 0em var(--heart1-outline), 5em 0em var(--heart1-outline), 6em 0em var(--heart1-outline), 1em 1em var(--heart1-outline), 4em 1em var(--heart1-outline), 7em 1em var(--heart1-outline), 0em 2em var(--heart1-outline), 8em 2em var(--heart1-outline), 0em 3em var(--heart1-outline), 8em 3em var(--heart1-outline), 0em 4em var(--heart1-outline), 8em 4em var(--heart1-outline), 1em 5em var(--heart1-outline), 7em 5em var(--heart1-outline), 2em 6em var(--heart1-outline), 6em 6em var(--heart1-outline), 3em 7em var(--heart1-outline), 5em 7em var(--heart1-outline), 4em 8em var(--heart1-outline);
+}
+
+.heart1-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart1-outline-special), 3em 0em var(--heart1-outline-special), 5em 0em var(--heart1-outline-special), 6em 0em var(--heart1-outline-special), 1em 1em var(--heart1-outline-special), 4em 1em var(--heart1-outline-special), 7em 1em var(--heart1-outline-special), 0em 2em var(--heart1-outline-special), 8em 2em var(--heart1-outline-special), 0em 3em var(--heart1-outline-special), 8em 3em var(--heart1-outline-special), 0em 4em var(--heart1-outline-special), 8em 4em var(--heart1-outline-special), 1em 5em var(--heart1-outline-special), 7em 5em var(--heart1-outline-special), 2em 6em var(--heart1-outline-special), 6em 6em var(--heart1-outline-special), 3em 7em var(--heart1-outline-special), 5em 7em var(--heart1-outline-special), 4em 8em var(--heart1-outline-special);
+          box-shadow: 2em 0em var(--heart1-outline-special), 3em 0em var(--heart1-outline-special), 5em 0em var(--heart1-outline-special), 6em 0em var(--heart1-outline-special), 1em 1em var(--heart1-outline-special), 4em 1em var(--heart1-outline-special), 7em 1em var(--heart1-outline-special), 0em 2em var(--heart1-outline-special), 8em 2em var(--heart1-outline-special), 0em 3em var(--heart1-outline-special), 8em 3em var(--heart1-outline-special), 0em 4em var(--heart1-outline-special), 8em 4em var(--heart1-outline-special), 1em 5em var(--heart1-outline-special), 7em 5em var(--heart1-outline-special), 2em 6em var(--heart1-outline-special), 6em 6em var(--heart1-outline-special), 3em 7em var(--heart1-outline-special), 5em 7em var(--heart1-outline-special), 4em 8em var(--heart1-outline-special);
+}
+
+.heart2-outline {
+  -webkit-box-shadow: 2em 0em var(--heart2-outline), 3em 0em var(--heart2-outline), 5em 0em var(--heart2-outline), 6em 0em var(--heart2-outline), 1em 1em var(--heart2-outline), 4em 1em var(--heart2-outline), 7em 1em var(--heart2-outline), 0em 2em var(--heart2-outline), 8em 2em var(--heart2-outline), 0em 3em var(--heart2-outline), 8em 3em var(--heart2-outline), 0em 4em var(--heart2-outline), 8em 4em var(--heart2-outline), 1em 5em var(--heart2-outline), 7em 5em var(--heart2-outline), 2em 6em var(--heart2-outline), 6em 6em var(--heart2-outline), 3em 7em var(--heart2-outline), 5em 7em var(--heart2-outline), 4em 8em var(--heart2-outline);
+          box-shadow: 2em 0em var(--heart2-outline), 3em 0em var(--heart2-outline), 5em 0em var(--heart2-outline), 6em 0em var(--heart2-outline), 1em 1em var(--heart2-outline), 4em 1em var(--heart2-outline), 7em 1em var(--heart2-outline), 0em 2em var(--heart2-outline), 8em 2em var(--heart2-outline), 0em 3em var(--heart2-outline), 8em 3em var(--heart2-outline), 0em 4em var(--heart2-outline), 8em 4em var(--heart2-outline), 1em 5em var(--heart2-outline), 7em 5em var(--heart2-outline), 2em 6em var(--heart2-outline), 6em 6em var(--heart2-outline), 3em 7em var(--heart2-outline), 5em 7em var(--heart2-outline), 4em 8em var(--heart2-outline);
+}
+
+.heart2-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart2-outline-special), 3em 0em var(--heart2-outline-special), 5em 0em var(--heart2-outline-special), 6em 0em var(--heart2-outline-special), 1em 1em var(--heart2-outline-special), 4em 1em var(--heart2-outline-special), 7em 1em var(--heart2-outline-special), 0em 2em var(--heart2-outline-special), 8em 2em var(--heart2-outline-special), 0em 3em var(--heart2-outline-special), 8em 3em var(--heart2-outline-special), 0em 4em var(--heart2-outline-special), 8em 4em var(--heart2-outline-special), 1em 5em var(--heart2-outline-special), 7em 5em var(--heart2-outline-special), 2em 6em var(--heart2-outline-special), 6em 6em var(--heart2-outline-special), 3em 7em var(--heart2-outline-special), 5em 7em var(--heart2-outline-special), 4em 8em var(--heart2-outline-special);
+          box-shadow: 2em 0em var(--heart2-outline-special), 3em 0em var(--heart2-outline-special), 5em 0em var(--heart2-outline-special), 6em 0em var(--heart2-outline-special), 1em 1em var(--heart2-outline-special), 4em 1em var(--heart2-outline-special), 7em 1em var(--heart2-outline-special), 0em 2em var(--heart2-outline-special), 8em 2em var(--heart2-outline-special), 0em 3em var(--heart2-outline-special), 8em 3em var(--heart2-outline-special), 0em 4em var(--heart2-outline-special), 8em 4em var(--heart2-outline-special), 1em 5em var(--heart2-outline-special), 7em 5em var(--heart2-outline-special), 2em 6em var(--heart2-outline-special), 6em 6em var(--heart2-outline-special), 3em 7em var(--heart2-outline-special), 5em 7em var(--heart2-outline-special), 4em 8em var(--heart2-outline-special);
+}
+
+.heart3-outline {
+  -webkit-box-shadow: 2em 0em var(--heart3-outline), 3em 0em var(--heart3-outline), 5em 0em var(--heart3-outline), 6em 0em var(--heart3-outline), 1em 1em var(--heart3-outline), 4em 1em var(--heart3-outline), 7em 1em var(--heart3-outline), 0em 2em var(--heart3-outline), 8em 2em var(--heart3-outline), 0em 3em var(--heart3-outline), 8em 3em var(--heart3-outline), 0em 4em var(--heart3-outline), 8em 4em var(--heart3-outline), 1em 5em var(--heart3-outline), 7em 5em var(--heart3-outline), 2em 6em var(--heart3-outline), 6em 6em var(--heart3-outline), 3em 7em var(--heart3-outline), 5em 7em var(--heart3-outline), 4em 8em var(--heart3-outline);
+          box-shadow: 2em 0em var(--heart3-outline), 3em 0em var(--heart3-outline), 5em 0em var(--heart3-outline), 6em 0em var(--heart3-outline), 1em 1em var(--heart3-outline), 4em 1em var(--heart3-outline), 7em 1em var(--heart3-outline), 0em 2em var(--heart3-outline), 8em 2em var(--heart3-outline), 0em 3em var(--heart3-outline), 8em 3em var(--heart3-outline), 0em 4em var(--heart3-outline), 8em 4em var(--heart3-outline), 1em 5em var(--heart3-outline), 7em 5em var(--heart3-outline), 2em 6em var(--heart3-outline), 6em 6em var(--heart3-outline), 3em 7em var(--heart3-outline), 5em 7em var(--heart3-outline), 4em 8em var(--heart3-outline);
+}
+
+.heart3-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart3-outline-special), 3em 0em var(--heart3-outline-special), 5em 0em var(--heart3-outline-special), 6em 0em var(--heart3-outline-special), 1em 1em var(--heart3-outline-special), 4em 1em var(--heart3-outline-special), 7em 1em var(--heart3-outline-special), 0em 2em var(--heart3-outline-special), 8em 2em var(--heart3-outline-special), 0em 3em var(--heart3-outline-special), 8em 3em var(--heart3-outline-special), 0em 4em var(--heart3-outline-special), 8em 4em var(--heart3-outline-special), 1em 5em var(--heart3-outline-special), 7em 5em var(--heart3-outline-special), 2em 6em var(--heart3-outline-special), 6em 6em var(--heart3-outline-special), 3em 7em var(--heart3-outline-special), 5em 7em var(--heart3-outline-special), 4em 8em var(--heart3-outline-special);
+          box-shadow: 2em 0em var(--heart3-outline-special), 3em 0em var(--heart3-outline-special), 5em 0em var(--heart3-outline-special), 6em 0em var(--heart3-outline-special), 1em 1em var(--heart3-outline-special), 4em 1em var(--heart3-outline-special), 7em 1em var(--heart3-outline-special), 0em 2em var(--heart3-outline-special), 8em 2em var(--heart3-outline-special), 0em 3em var(--heart3-outline-special), 8em 3em var(--heart3-outline-special), 0em 4em var(--heart3-outline-special), 8em 4em var(--heart3-outline-special), 1em 5em var(--heart3-outline-special), 7em 5em var(--heart3-outline-special), 2em 6em var(--heart3-outline-special), 6em 6em var(--heart3-outline-special), 3em 7em var(--heart3-outline-special), 5em 7em var(--heart3-outline-special), 4em 8em var(--heart3-outline-special);
+}
+
+.heart4-outline {
+  -webkit-box-shadow: 2em 0em var(--heart4-outline), 3em 0em var(--heart4-outline), 5em 0em var(--heart4-outline), 6em 0em var(--heart4-outline), 1em 1em var(--heart4-outline), 4em 1em var(--heart4-outline), 7em 1em var(--heart4-outline), 0em 2em var(--heart4-outline), 8em 2em var(--heart4-outline), 0em 3em var(--heart4-outline), 8em 3em var(--heart4-outline), 0em 4em var(--heart4-outline), 8em 4em var(--heart4-outline), 1em 5em var(--heart4-outline), 7em 5em var(--heart4-outline), 2em 6em var(--heart4-outline), 6em 6em var(--heart4-outline), 3em 7em var(--heart4-outline), 5em 7em var(--heart4-outline), 4em 8em var(--heart4-outline);
+          box-shadow: 2em 0em var(--heart4-outline), 3em 0em var(--heart4-outline), 5em 0em var(--heart4-outline), 6em 0em var(--heart4-outline), 1em 1em var(--heart4-outline), 4em 1em var(--heart4-outline), 7em 1em var(--heart4-outline), 0em 2em var(--heart4-outline), 8em 2em var(--heart4-outline), 0em 3em var(--heart4-outline), 8em 3em var(--heart4-outline), 0em 4em var(--heart4-outline), 8em 4em var(--heart4-outline), 1em 5em var(--heart4-outline), 7em 5em var(--heart4-outline), 2em 6em var(--heart4-outline), 6em 6em var(--heart4-outline), 3em 7em var(--heart4-outline), 5em 7em var(--heart4-outline), 4em 8em var(--heart4-outline);
+}
+
+.heart4-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart4-outline-special), 3em 0em var(--heart4-outline-special), 5em 0em var(--heart4-outline-special), 6em 0em var(--heart4-outline-special), 1em 1em var(--heart4-outline-special), 4em 1em var(--heart4-outline-special), 7em 1em var(--heart4-outline-special), 0em 2em var(--heart4-outline-special), 8em 2em var(--heart4-outline-special), 0em 3em var(--heart4-outline-special), 8em 3em var(--heart4-outline-special), 0em 4em var(--heart4-outline-special), 8em 4em var(--heart4-outline-special), 1em 5em var(--heart4-outline-special), 7em 5em var(--heart4-outline-special), 2em 6em var(--heart4-outline-special), 6em 6em var(--heart4-outline-special), 3em 7em var(--heart4-outline-special), 5em 7em var(--heart4-outline-special), 4em 8em var(--heart4-outline-special);
+          box-shadow: 2em 0em var(--heart4-outline-special), 3em 0em var(--heart4-outline-special), 5em 0em var(--heart4-outline-special), 6em 0em var(--heart4-outline-special), 1em 1em var(--heart4-outline-special), 4em 1em var(--heart4-outline-special), 7em 1em var(--heart4-outline-special), 0em 2em var(--heart4-outline-special), 8em 2em var(--heart4-outline-special), 0em 3em var(--heart4-outline-special), 8em 3em var(--heart4-outline-special), 0em 4em var(--heart4-outline-special), 8em 4em var(--heart4-outline-special), 1em 5em var(--heart4-outline-special), 7em 5em var(--heart4-outline-special), 2em 6em var(--heart4-outline-special), 6em 6em var(--heart4-outline-special), 3em 7em var(--heart4-outline-special), 5em 7em var(--heart4-outline-special), 4em 8em var(--heart4-outline-special);
+}
+
+.heart5-outline {
+  -webkit-box-shadow: 2em 0em var(--heart5-outline), 3em 0em var(--heart5-outline), 5em 0em var(--heart5-outline), 6em 0em var(--heart5-outline), 1em 1em var(--heart5-outline), 4em 1em var(--heart5-outline), 7em 1em var(--heart5-outline), 0em 2em var(--heart5-outline), 8em 2em var(--heart5-outline), 0em 3em var(--heart5-outline), 8em 3em var(--heart5-outline), 0em 4em var(--heart5-outline), 8em 4em var(--heart5-outline), 1em 5em var(--heart5-outline), 7em 5em var(--heart5-outline), 2em 6em var(--heart5-outline), 6em 6em var(--heart5-outline), 3em 7em var(--heart5-outline), 5em 7em var(--heart5-outline), 4em 8em var(--heart5-outline);
+          box-shadow: 2em 0em var(--heart5-outline), 3em 0em var(--heart5-outline), 5em 0em var(--heart5-outline), 6em 0em var(--heart5-outline), 1em 1em var(--heart5-outline), 4em 1em var(--heart5-outline), 7em 1em var(--heart5-outline), 0em 2em var(--heart5-outline), 8em 2em var(--heart5-outline), 0em 3em var(--heart5-outline), 8em 3em var(--heart5-outline), 0em 4em var(--heart5-outline), 8em 4em var(--heart5-outline), 1em 5em var(--heart5-outline), 7em 5em var(--heart5-outline), 2em 6em var(--heart5-outline), 6em 6em var(--heart5-outline), 3em 7em var(--heart5-outline), 5em 7em var(--heart5-outline), 4em 8em var(--heart5-outline);
+}
+
+.heart5-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart5-outline-special), 3em 0em var(--heart5-outline-special), 5em 0em var(--heart5-outline-special), 6em 0em var(--heart5-outline-special), 1em 1em var(--heart5-outline-special), 4em 1em var(--heart5-outline-special), 7em 1em var(--heart5-outline-special), 0em 2em var(--heart5-outline-special), 8em 2em var(--heart5-outline-special), 0em 3em var(--heart5-outline-special), 8em 3em var(--heart5-outline-special), 0em 4em var(--heart5-outline-special), 8em 4em var(--heart5-outline-special), 1em 5em var(--heart5-outline-special), 7em 5em var(--heart5-outline-special), 2em 6em var(--heart5-outline-special), 6em 6em var(--heart5-outline-special), 3em 7em var(--heart5-outline-special), 5em 7em var(--heart5-outline-special), 4em 8em var(--heart5-outline-special);
+          box-shadow: 2em 0em var(--heart5-outline-special), 3em 0em var(--heart5-outline-special), 5em 0em var(--heart5-outline-special), 6em 0em var(--heart5-outline-special), 1em 1em var(--heart5-outline-special), 4em 1em var(--heart5-outline-special), 7em 1em var(--heart5-outline-special), 0em 2em var(--heart5-outline-special), 8em 2em var(--heart5-outline-special), 0em 3em var(--heart5-outline-special), 8em 3em var(--heart5-outline-special), 0em 4em var(--heart5-outline-special), 8em 4em var(--heart5-outline-special), 1em 5em var(--heart5-outline-special), 7em 5em var(--heart5-outline-special), 2em 6em var(--heart5-outline-special), 6em 6em var(--heart5-outline-special), 3em 7em var(--heart5-outline-special), 5em 7em var(--heart5-outline-special), 4em 8em var(--heart5-outline-special);
+}
+
+.heart6-outline {
+  -webkit-box-shadow: 2em 0em var(--heart6-outline), 3em 0em var(--heart6-outline), 5em 0em var(--heart6-outline), 6em 0em var(--heart6-outline), 1em 1em var(--heart6-outline), 4em 1em var(--heart6-outline), 7em 1em var(--heart6-outline), 0em 2em var(--heart6-outline), 8em 2em var(--heart6-outline), 0em 3em var(--heart6-outline), 8em 3em var(--heart6-outline), 0em 4em var(--heart6-outline), 8em 4em var(--heart6-outline), 1em 5em var(--heart6-outline), 7em 5em var(--heart6-outline), 2em 6em var(--heart6-outline), 6em 6em var(--heart6-outline), 3em 7em var(--heart6-outline), 5em 7em var(--heart6-outline), 4em 8em var(--heart6-outline);
+          box-shadow: 2em 0em var(--heart6-outline), 3em 0em var(--heart6-outline), 5em 0em var(--heart6-outline), 6em 0em var(--heart6-outline), 1em 1em var(--heart6-outline), 4em 1em var(--heart6-outline), 7em 1em var(--heart6-outline), 0em 2em var(--heart6-outline), 8em 2em var(--heart6-outline), 0em 3em var(--heart6-outline), 8em 3em var(--heart6-outline), 0em 4em var(--heart6-outline), 8em 4em var(--heart6-outline), 1em 5em var(--heart6-outline), 7em 5em var(--heart6-outline), 2em 6em var(--heart6-outline), 6em 6em var(--heart6-outline), 3em 7em var(--heart6-outline), 5em 7em var(--heart6-outline), 4em 8em var(--heart6-outline);
+}
+
+.heart6-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart6-outline-special), 3em 0em var(--heart6-outline-special), 5em 0em var(--heart6-outline-special), 6em 0em var(--heart6-outline-special), 1em 1em var(--heart6-outline-special), 4em 1em var(--heart6-outline-special), 7em 1em var(--heart6-outline-special), 0em 2em var(--heart6-outline-special), 8em 2em var(--heart6-outline-special), 0em 3em var(--heart6-outline-special), 8em 3em var(--heart6-outline-special), 0em 4em var(--heart6-outline-special), 8em 4em var(--heart6-outline-special), 1em 5em var(--heart6-outline-special), 7em 5em var(--heart6-outline-special), 2em 6em var(--heart6-outline-special), 6em 6em var(--heart6-outline-special), 3em 7em var(--heart6-outline-special), 5em 7em var(--heart6-outline-special), 4em 8em var(--heart6-outline-special);
+          box-shadow: 2em 0em var(--heart6-outline-special), 3em 0em var(--heart6-outline-special), 5em 0em var(--heart6-outline-special), 6em 0em var(--heart6-outline-special), 1em 1em var(--heart6-outline-special), 4em 1em var(--heart6-outline-special), 7em 1em var(--heart6-outline-special), 0em 2em var(--heart6-outline-special), 8em 2em var(--heart6-outline-special), 0em 3em var(--heart6-outline-special), 8em 3em var(--heart6-outline-special), 0em 4em var(--heart6-outline-special), 8em 4em var(--heart6-outline-special), 1em 5em var(--heart6-outline-special), 7em 5em var(--heart6-outline-special), 2em 6em var(--heart6-outline-special), 6em 6em var(--heart6-outline-special), 3em 7em var(--heart6-outline-special), 5em 7em var(--heart6-outline-special), 4em 8em var(--heart6-outline-special);
+}
+
+.heart7-outline {
+  -webkit-box-shadow: 2em 0em var(--heart7-outline), 3em 0em var(--heart7-outline), 5em 0em var(--heart7-outline), 6em 0em var(--heart7-outline), 1em 1em var(--heart7-outline), 4em 1em var(--heart7-outline), 7em 1em var(--heart7-outline), 0em 2em var(--heart7-outline), 8em 2em var(--heart7-outline), 0em 3em var(--heart7-outline), 8em 3em var(--heart7-outline), 0em 4em var(--heart7-outline), 8em 4em var(--heart7-outline), 1em 5em var(--heart7-outline), 7em 5em var(--heart7-outline), 2em 6em var(--heart7-outline), 6em 6em var(--heart7-outline), 3em 7em var(--heart7-outline), 5em 7em var(--heart7-outline), 4em 8em var(--heart7-outline);
+          box-shadow: 2em 0em var(--heart7-outline), 3em 0em var(--heart7-outline), 5em 0em var(--heart7-outline), 6em 0em var(--heart7-outline), 1em 1em var(--heart7-outline), 4em 1em var(--heart7-outline), 7em 1em var(--heart7-outline), 0em 2em var(--heart7-outline), 8em 2em var(--heart7-outline), 0em 3em var(--heart7-outline), 8em 3em var(--heart7-outline), 0em 4em var(--heart7-outline), 8em 4em var(--heart7-outline), 1em 5em var(--heart7-outline), 7em 5em var(--heart7-outline), 2em 6em var(--heart7-outline), 6em 6em var(--heart7-outline), 3em 7em var(--heart7-outline), 5em 7em var(--heart7-outline), 4em 8em var(--heart7-outline);
+}
+
+.heart7-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart7-outline-special), 3em 0em var(--heart7-outline-special), 5em 0em var(--heart7-outline-special), 6em 0em var(--heart7-outline-special), 1em 1em var(--heart7-outline-special), 4em 1em var(--heart7-outline-special), 7em 1em var(--heart7-outline-special), 0em 2em var(--heart7-outline-special), 8em 2em var(--heart7-outline-special), 0em 3em var(--heart7-outline-special), 8em 3em var(--heart7-outline-special), 0em 4em var(--heart7-outline-special), 8em 4em var(--heart7-outline-special), 1em 5em var(--heart7-outline-special), 7em 5em var(--heart7-outline-special), 2em 6em var(--heart7-outline-special), 6em 6em var(--heart7-outline-special), 3em 7em var(--heart7-outline-special), 5em 7em var(--heart7-outline-special), 4em 8em var(--heart7-outline-special);
+          box-shadow: 2em 0em var(--heart7-outline-special), 3em 0em var(--heart7-outline-special), 5em 0em var(--heart7-outline-special), 6em 0em var(--heart7-outline-special), 1em 1em var(--heart7-outline-special), 4em 1em var(--heart7-outline-special), 7em 1em var(--heart7-outline-special), 0em 2em var(--heart7-outline-special), 8em 2em var(--heart7-outline-special), 0em 3em var(--heart7-outline-special), 8em 3em var(--heart7-outline-special), 0em 4em var(--heart7-outline-special), 8em 4em var(--heart7-outline-special), 1em 5em var(--heart7-outline-special), 7em 5em var(--heart7-outline-special), 2em 6em var(--heart7-outline-special), 6em 6em var(--heart7-outline-special), 3em 7em var(--heart7-outline-special), 5em 7em var(--heart7-outline-special), 4em 8em var(--heart7-outline-special);
+}
+
+.heart8-outline {
+  -webkit-box-shadow: 2em 0em var(--heart8-outline), 3em 0em var(--heart8-outline), 5em 0em var(--heart8-outline), 6em 0em var(--heart8-outline), 1em 1em var(--heart8-outline), 4em 1em var(--heart8-outline), 7em 1em var(--heart8-outline), 0em 2em var(--heart8-outline), 8em 2em var(--heart8-outline), 0em 3em var(--heart8-outline), 8em 3em var(--heart8-outline), 0em 4em var(--heart8-outline), 8em 4em var(--heart8-outline), 1em 5em var(--heart8-outline), 7em 5em var(--heart8-outline), 2em 6em var(--heart8-outline), 6em 6em var(--heart8-outline), 3em 7em var(--heart8-outline), 5em 7em var(--heart8-outline), 4em 8em var(--heart8-outline);
+          box-shadow: 2em 0em var(--heart8-outline), 3em 0em var(--heart8-outline), 5em 0em var(--heart8-outline), 6em 0em var(--heart8-outline), 1em 1em var(--heart8-outline), 4em 1em var(--heart8-outline), 7em 1em var(--heart8-outline), 0em 2em var(--heart8-outline), 8em 2em var(--heart8-outline), 0em 3em var(--heart8-outline), 8em 3em var(--heart8-outline), 0em 4em var(--heart8-outline), 8em 4em var(--heart8-outline), 1em 5em var(--heart8-outline), 7em 5em var(--heart8-outline), 2em 6em var(--heart8-outline), 6em 6em var(--heart8-outline), 3em 7em var(--heart8-outline), 5em 7em var(--heart8-outline), 4em 8em var(--heart8-outline);
+}
+
+.heart8-outline-special {
+  -webkit-box-shadow: 2em 0em var(--heart8-outline-special), 3em 0em var(--heart8-outline-special), 5em 0em var(--heart8-outline-special), 6em 0em var(--heart8-outline-special), 1em 1em var(--heart8-outline-special), 4em 1em var(--heart8-outline-special), 7em 1em var(--heart8-outline-special), 0em 2em var(--heart8-outline-special), 8em 2em var(--heart8-outline-special), 0em 3em var(--heart8-outline-special), 8em 3em var(--heart8-outline-special), 0em 4em var(--heart8-outline-special), 8em 4em var(--heart8-outline-special), 1em 5em var(--heart8-outline-special), 7em 5em var(--heart8-outline-special), 2em 6em var(--heart8-outline-special), 6em 6em var(--heart8-outline-special), 3em 7em var(--heart8-outline-special), 5em 7em var(--heart8-outline-special), 4em 8em var(--heart8-outline-special);
+          box-shadow: 2em 0em var(--heart8-outline-special), 3em 0em var(--heart8-outline-special), 5em 0em var(--heart8-outline-special), 6em 0em var(--heart8-outline-special), 1em 1em var(--heart8-outline-special), 4em 1em var(--heart8-outline-special), 7em 1em var(--heart8-outline-special), 0em 2em var(--heart8-outline-special), 8em 2em var(--heart8-outline-special), 0em 3em var(--heart8-outline-special), 8em 3em var(--heart8-outline-special), 0em 4em var(--heart8-outline-special), 8em 4em var(--heart8-outline-special), 1em 5em var(--heart8-outline-special), 7em 5em var(--heart8-outline-special), 2em 6em var(--heart8-outline-special), 6em 6em var(--heart8-outline-special), 3em 7em var(--heart8-outline-special), 5em 7em var(--heart8-outline-special), 4em 8em var(--heart8-outline-special);
+}
+/*# sourceMappingURL=css.css.map */
