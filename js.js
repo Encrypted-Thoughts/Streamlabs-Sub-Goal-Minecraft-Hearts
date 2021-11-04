@@ -2,8 +2,7 @@ var tierCount = 0;
 var progressCount = 1;
 var slData = {};
 var slSettings = {};
-var tier1Limit = 110;
-var tier2Limit = 220;
+var tierLimit = 110;
 var heartCount = 0;
 
 document.addEventListener('goalLoad', function(obj) {
@@ -31,11 +30,9 @@ document.addEventListener('goalEvent', function(obj) {
 function updateGlobarVars(obj){
 	slData = obj.detail.amount;
 	heartCount = Math.floor(slData.current / slSettings.custom_json.subs_per_heart.value);
-	tier1Limit = slData.target * slData.target + slData.target;
-	tier2Limit = tier1Limit * 2;
-	tierCount = Math.floor(heartCount/tier1Limit);
-	progressCount = Math.floor((heartCount-(tierCount * tier1Limit))/slData.target);
-	console.log(tierCount + " " + tier1Limit + " " + tier2Limit + " " + progressCount);
+	tierLimit = slData.target ** 2 + slData.target;
+	tierCount = Math.floor(heartCount/tierLimit);
+	progressCount = Math.floor((heartCount-(tierCount * tierLimit))/slData.target);
 }
 
 function setBackground() {
@@ -91,7 +88,7 @@ function getFillClass(i) {
 			return `heart${j}-fill`;
 	}
 
-	if (i <= (heartCount-(tierCount * tier1Limit))%slData.target)
+	if (i <= (heartCount-(tierCount * tierLimit))%slData.target)
 		return `heart${tierCount+1}-fill`;
 
 	return `heart${tierCount}-fill`
