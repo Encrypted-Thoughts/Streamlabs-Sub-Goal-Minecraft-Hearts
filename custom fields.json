@@ -1,11 +1,11 @@
 {
     "heart_amount": {
-        "label": "How Many Hearts",
+        "label": "How Many Heart Containers",
         "type": "textfield",
         "value": "10"
     },
     "subs_per_heart": {
-        "label": "How Many Subs Per Heart",
+        "label": "How Many Subs to Fill a Single Heart",
         "type": "textfield",
         "value": "1"
     },
@@ -13,8 +13,8 @@
         "label": "Rank Up Rollover Point",
         "type": "dropdown",
         "options": {
-            "at_last": "At Last Heart",
-            "after_last": "After Last Heart"
+            "at_last": "At Last Heart (Maxed Bar = Heart Container Count^2 * Max Tier)",
+            "after_last": "After Last Heart (Maxed Bar = (Heart Container Count^2 + Heart Container Count) * Max Tier)"
         },
         "value": "at_last"
     },
@@ -25,10 +25,10 @@
             "1": "1 Tier",
             "2": "2 Tiers",
             "3": "3 Tiers",
-            "4": "4 Tier",
+            "4": "4 Tiers",
             "5": "5 Tiers",
             "6": "6 Tiers",
-            "7": "7 Tier",
+            "7": "7 Tiers",
             "8": "8 Tiers"
         },
         "value": "8"
