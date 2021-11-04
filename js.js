@@ -39,24 +39,13 @@ function updateGlobarVars(obj){
 }
 
 function setBackground() {
-	if(slSettings.custom_json.max_tier.value >= 8 && tierCount >= 8) 
-		$('#bar').css("background", "var(--tier8-background)");
-	else if(slSettings.custom_json.max_tier.value >= 7 && tierCount >= 7) 
-		$('#bar').css("background", "var(--tier7-background)");
-	else if(slSettings.custom_json.max_tier.value >= 6 && tierCount >= 6) 
-		$('#bar').css("background", "var(--tier6-background)");
-	else if(slSettings.custom_json.max_tier.value >= 5 && tierCount >= 5) 
-		$('#bar').css("background", "var(--tier5-background)");
-	else if(slSettings.custom_json.max_tier.value >= 4 && tierCount >= 4) 
-		$('#bar').css("background", "var(--tier4-background)");
-	else if(slSettings.custom_json.max_tier.value >= 3 && tierCount >= 3) 
-		$('#bar').css("background", "var(--tier3-background)");
-	else if(slSettings.custom_json.max_tier.value >= 2 && tierCount >= 2) 
-		$('#bar').css("background", "var(--tier2-background)");
-	else if(slSettings.custom_json.max_tier.value >= 1 && tierCount >= 1) 
-		$('#bar').css("background", "var(--tier1-background)");
-	else 
-		$('#bar').css("background", "var(--tier0-background)");
+	for(var j = slSettings.custom_json.max_tier.value; j > 0; j--) {
+		if(slSettings.custom_json.max_tier.value >= j && tierCount >= j)  {
+			$('#bar').css("background", `var(--tier${j}-background)`);
+			return;
+		}
+	}
+	$('#bar').css("background", "var(--tier0-background)");
 }
 
 function addHeart(i) {
@@ -84,22 +73,10 @@ function updateHeart(i) {
 }
 
 function getOutlineClass(i) {
-	if (slSettings.custom_json.max_tier.value === "8" && tierCount >= 8)
-		return "heart8-outline";
-	if (slSettings.custom_json.max_tier.value === "7" && tierCount >= 7)
-		return "heart7-outline";
-	if (slSettings.custom_json.max_tier.value === "6" && tierCount >= 6)
-		return "heart6-outline";
-	if (slSettings.custom_json.max_tier.value === "5" && tierCount >= 5)
-		return "heart5-outline";
-	if (slSettings.custom_json.max_tier.value === "4" && tierCount >= 4)
-		return "heart4-outline";
-	if (slSettings.custom_json.max_tier.value === "3" && tierCount >= 3)
-		return "heart3-outline";
-	if (slSettings.custom_json.max_tier.value === "2" && tierCount >= 2)
-		return "heart2-outline";
-	if (slSettings.custom_json.max_tier.value === "1" && tierCount >= 1)
-		return "heart1-outline";
+	for(var j = slSettings.custom_json.max_tier.value; j > 0; j--) {
+		if (slSettings.custom_json.max_tier.value === j && tierCount >= j)
+			return `heart${j}-outline`;
+	}
 
 	if (progressCount >= i)
 		return `heart${tierCount+1}-outline-special`;
@@ -108,22 +85,11 @@ function getOutlineClass(i) {
 }
 
 function getFillClass(i) {
-	if (slSettings.custom_json.max_tier.value === "8" && tierCount >= 8)
-		return "heart8-fill";
-	if (slSettings.custom_json.max_tier.value === "7" && tierCount >= 7)
-		return "heart7-fill";
-	if (slSettings.custom_json.max_tier.value === "6" && tierCount >= 6)
-		return "heart6-fill";
-	if (slSettings.custom_json.max_tier.value === "5" && tierCount >= 5)
-		return "heart5-fill";
-	if (slSettings.custom_json.max_tier.value === "4" && tierCount >= 4)
-		return "heart4-fill";
-	if (slSettings.custom_json.max_tier.value === "3" && tierCount >= 3)
-		return "heart3-fill";
-	if (slSettings.custom_json.max_tier.value === "2" && tierCount >= 2)
-		return "heart2-fill";
-	if (slSettings.custom_json.max_tier.value === "1" && tierCount >= 1)
-		return "heart1-fill";
+
+	for(var j = slSettings.custom_json.max_tier.value; j > 0; j--) {
+		if (slSettings.custom_json.max_tier.value === j && tierCount >= j)
+			return `heart${j}-fill`;
+	}
 
 	if (i <= (heartCount-(tierCount * tier1Limit))%slData.target)
 		return `heart${tierCount+1}-fill`;
@@ -147,65 +113,17 @@ function applySettings() {
 	document.documentElement.style.setProperty('--bar-border-thickness', slSettings.custom_json.bar_border_thickness.value + "px");
 	document.documentElement.style.setProperty('--animate-duration', slSettings.custom_json.animate_duration.value + "ms");
 	document.documentElement.style.setProperty('--animate-delay', slSettings.custom_json.animate_delay.value + "ms");
-  
+
 	document.documentElement.style.setProperty('--tier0-background', slSettings.custom_json.empty_background.value);
 	document.documentElement.style.setProperty('--heart0-primary', slSettings.custom_json.empty_primary.value);
 	document.documentElement.style.setProperty('--heart0-secondary', slSettings.custom_json.empty_primary.value);
 	document.documentElement.style.setProperty('--heart0-shine', slSettings.custom_json.empty_primary.value);
-	
-	document.documentElement.style.setProperty('--tier1-background', slSettings.custom_json.tier1_background.value);
-	document.documentElement.style.setProperty('--heart1-primary', slSettings.custom_json.heart1_primary.value);
-	document.documentElement.style.setProperty('--heart1-secondary', slSettings.custom_json.heart1_secondary.value);
-	document.documentElement.style.setProperty('--heart1-shine', slSettings.custom_json.heart1_shine.value);
-	document.documentElement.style.setProperty('--heart1-outline', slSettings.custom_json.heart1_outline.value);
-	document.documentElement.style.setProperty('--heart1-outline-special', slSettings.custom_json.heart1_outline_special.value);
-	
-	document.documentElement.style.setProperty('--tier2-background', slSettings.custom_json.tier2_background.value);
-	document.documentElement.style.setProperty('--heart2-primary', slSettings.custom_json.heart2_primary.value);
-	document.documentElement.style.setProperty('--heart2-secondary', slSettings.custom_json.heart2_secondary.value);
-	document.documentElement.style.setProperty('--heart2-shine', slSettings.custom_json.heart2_shine.value);
-	document.documentElement.style.setProperty('--heart2-outline', slSettings.custom_json.heart2_outline.value);
-	document.documentElement.style.setProperty('--heart2-outline-special', slSettings.custom_json.heart2_outline_special.value);
-  
-	document.documentElement.style.setProperty('--tier3-background', slSettings.custom_json.tier3_background.value);
-	document.documentElement.style.setProperty('--heart3-primary', slSettings.custom_json.heart3_primary.value);
-	document.documentElement.style.setProperty('--heart3-secondary', slSettings.custom_json.heart3_secondary.value);
-	document.documentElement.style.setProperty('--heart3-shine', slSettings.custom_json.heart3_shine.value);
-	document.documentElement.style.setProperty('--heart3-outline', slSettings.custom_json.heart3_outline.value);
-	document.documentElement.style.setProperty('--heart3-outline-special', slSettings.custom_json.heart3_outline_special.value);
-	
-	document.documentElement.style.setProperty('--tier4-background', slSettings.custom_json.tier4_background.value);
-	document.documentElement.style.setProperty('--heart4-primary', slSettings.custom_json.heart4_primary.value);
-	document.documentElement.style.setProperty('--heart4-secondary', slSettings.custom_json.heart4_secondary.value);
-	document.documentElement.style.setProperty('--heart4-shine', slSettings.custom_json.heart4_shine.value);
-	document.documentElement.style.setProperty('--heart4-outline', slSettings.custom_json.heart4_outline.value);
-	document.documentElement.style.setProperty('--heart4-outline-special', slSettings.custom_json.heart4_outline_special.value);
-	
-	document.documentElement.style.setProperty('--tier5-background', slSettings.custom_json.tier5_background.value);
-	document.documentElement.style.setProperty('--heart5-primary', slSettings.custom_json.heart5_primary.value);
-	document.documentElement.style.setProperty('--heart5-secondary', slSettings.custom_json.heart5_secondary.value);
-	document.documentElement.style.setProperty('--heart5-shine', slSettings.custom_json.heart5_shine.value);
-	document.documentElement.style.setProperty('--heart5-outline', slSettings.custom_json.heart5_outline.value);
-	document.documentElement.style.setProperty('--heart5-outline-special', slSettings.custom_json.heart5_outline_special.value);
-	
-	document.documentElement.style.setProperty('--tier6-background', slSettings.custom_json.tier6_background.value);
-	document.documentElement.style.setProperty('--heart6-primary', slSettings.custom_json.heart6_primary.value);
-	document.documentElement.style.setProperty('--heart6-secondary', slSettings.custom_json.heart6_secondary.value);
-	document.documentElement.style.setProperty('--heart6-shine', slSettings.custom_json.heart6_shine.value);
-	document.documentElement.style.setProperty('--heart6-outline', slSettings.custom_json.heart6_outline.value);
-	document.documentElement.style.setProperty('--heart6-outline-special', slSettings.custom_json.heart6_outline_special.value);
-	
-	document.documentElement.style.setProperty('--tier7-background', slSettings.custom_json.tier7_background.value);
-	document.documentElement.style.setProperty('--heart7-primary', slSettings.custom_json.heart7_primary.value);
-	document.documentElement.style.setProperty('--heart7-secondary', slSettings.custom_json.heart7_secondary.value);
-	document.documentElement.style.setProperty('--heart7-shine', slSettings.custom_json.heart7_shine.value);
-	document.documentElement.style.setProperty('--heart7-outline', slSettings.custom_json.heart7_outline.value);
-	document.documentElement.style.setProperty('--heart7-outline-special', slSettings.custom_json.heart7_outline_special.value);
-	
-	document.documentElement.style.setProperty('--tier8-background', slSettings.custom_json.tier8_background.value);
-	document.documentElement.style.setProperty('--heart8-primary', slSettings.custom_json.heart8_primary.value);
-	document.documentElement.style.setProperty('--heart8-secondary', slSettings.custom_json.heart8_secondary.value);
-	document.documentElement.style.setProperty('--heart8-shine', slSettings.custom_json.heart8_shine.value);
-	document.documentElement.style.setProperty('--heart8-outline', slSettings.custom_json.heart8_outline.value);
-	document.documentElement.style.setProperty('--heart8-outline-special', slSettings.custom_json.heart8_outline_special.value);
+	for(var i = 1; i <= slSettings.custom_json.max_tier.value; i++) {
+		document.documentElement.style.setProperty(`--tier${i}-background`, slSettings.custom_json[`tier${i}_background`].value);
+		document.documentElement.style.setProperty(`--heart${i}-primary`, slSettings.custom_json[`heart${i}_primary`].value);
+		document.documentElement.style.setProperty(`--heart${i}-secondary`, slSettings.custom_json[`heart${i}_secondary`].value);
+		document.documentElement.style.setProperty(`--heart${i}-shine`, slSettings.custom_json[`heart${i}_shine`].value);
+		document.documentElement.style.setProperty(`--heart${i}-outline`, slSettings.custom_json[`heart${i}_outline`].value);
+		document.documentElement.style.setProperty(`--heart${i}-outline-special`, slSettings.custom_json[`heart${i}_outline_special`].value);
+	}
 }
