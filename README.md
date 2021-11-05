@@ -11,15 +11,15 @@ If all 8 tiers are used at 1 sub per heart and 10 heart containers it would take
 
 ## Installation
 
-1) Go to https://streamlabs.com/dashboard#/subgoal
+1) Go to: <a href="https://streamlabs.com/dashboard#/subgoal" target="_blank">Streamlabs Dashboard - Subgoal</a>
 2) Start a new goal if you haven't already. "Goal Amount" won't matter with this but "Current Amount", "End After", and "Goal Type" do affect the bar.
 3) Navigate to the "Settings" tab.
 4) Set "Include Resubs" to either include or not include resubs.
 5) Set "Enable Custom HTML/CSS" to Enabled.
-6) Go to https://gist.github.com/Encrypted-Thoughts/ca4e3895b92b3220aa908e204d6f41ab
-7) Copy and paste each code block to the corresponding HTML, CSS, JS, and Custom Fields tab. Custom Fields is slightly difference as you will need to click the "Edit Custom Fields" button first and then paste the updated code in, and then click the "Update" button to apply the change.
-8) Go through and edit whatever settings you'd like on the Custom Fields tab.
-9) Click the "Save Settings" button at the bottom of the page.
+6) Go to: <a href="https://gist.github.com/Encrypted-Thoughts/ca4e3895b92b3220aa908e204d6f41ab" target="_blank">Latest Hearts Sub Bar Release</a>
+8) Copy and paste each code block to the corresponding HTML, CSS, JS, and Custom Fields tab. Custom Fields is slightly difference as you will need to click the "Edit Custom Fields" button first and then paste the updated code in, and then click the "Update" button to apply the change.
+9) Go through and edit whatever settings you'd like on the Custom Fields tab.
+10) Click the "Save Settings" button at the bottom of the page.
 
 ## Available Settings
 
