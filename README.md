@@ -4,7 +4,7 @@ Custom Streamlabs sub goal bar that displays as a filling set of minecraft heart
 
 The bar has a configurable number of heart containers, number of subs per heart, tiers, etc. Currently only goes up to 8 tiers but more could be added easily if you're a bit css savvy.
 
-If all 8 tiers are used at 1 sub per heart and 10 heart containers it would take 800 or 880 subs to fill the heart depending on the "Rank Up Rollover Point" set in the bar Custom Fields. 
+If all 8 tiers are used at 1 sub per heart and 10 heart containers it would take 800 or 880 subs to fill the bar depending on the "Rank Up Rollover Point" set in the bar Custom Fields. 
 
 ![mc heart sub bar](https://user-images.githubusercontent.com/50642352/140399999-20cd8d64-1ce0-47ca-bb17-b1f5f1224eac.gif)
 
